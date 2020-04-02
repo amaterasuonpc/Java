@@ -8,25 +8,22 @@
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="800.0">
          <children>
-            <Canvas fx:id="Canvas" height="332.0" layoutX="14.0" layoutY="131.0" onMouseClicked="#draw" width="769.0" />
             <Pane fx:id="ConfigurationPanel" layoutX="14.0" layoutY="14.0" prefHeight="118.0" prefWidth="607.0">
                <children>
                   <TextField fx:id="textField1" layoutY="14.0" onAction="#tf1Function" promptText="Size" />
                   <TextField fx:id="textField2" layoutY="47.0" onAction="#tf2Function" promptText="NumberOfSides" />
                   <TextField fx:id="textField3" layoutY="79.0" onAction="#tf3Function" promptText="Color" />
-                  <TextField fx:id="textField4" layoutX="155.0" layoutY="14.0" onAction="#tf4Function" promptText="StrokeSize" />
-                  <TextField fx:id="textField5" layoutX="155.0" layoutY="47.0" promptText="ToBeAdded" />
-                  <TextField fx:id="textField6" layoutX="155.0" layoutY="79.0" promptText="ToBeAdded" />
                </children>
             </Pane>
-            <ToolBar layoutX="14.0" layoutY="531.0" prefHeight="54.0" prefWidth="189.0">
+            <ToolBar layoutX="300.0" layoutY="531.0" prefHeight="54.0" prefWidth="200.0">
               <items>
-                <Button fx:id="save" mnemonicParsing="false" text="Save" />
-                  <Button fx:id="load" mnemonicParsing="false" text="Load" />
-                  <Button fx:id="reset" mnemonicParsing="false" text="Reset" />
-                  <Button fx:id="exit" mnemonicParsing="false" text="Exit" />
+                <Button fx:id="save" mnemonicParsing="false" onAction="#saveFunction" text="Save" />
+                  <Button fx:id="load" mnemonicParsing="false" onAction="#loadfunction" text="Load" />
+                  <Button fx:id="reset" mnemonicParsing="false" onAction="#resetfunction" text="Reset" />
+                  <Button fx:id="exit" mnemonicParsing="false" onAction="#exitfunction" text="Exit" />
               </items>
             </ToolBar>
+            <Canvas fx:id="canvas1" height="392.0" layoutX="8.0" layoutY="135.0" onKeyPressed="#draw" onMouseClicked="#draw" width="783.0" />
          </children></AnchorPane>
    </children>
    <columnConstraints>
